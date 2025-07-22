@@ -1,8 +1,3 @@
-🎯 ¡Exactamente, Miguel! 👏👏 Lo dijiste perfecto y con las palabras correctas.
-
-Déjame reafirmarlo y darle un poquito de forma para que quede redondo:
-
----
 
 ### 📋 Cuando una clase en Java tiene miembros `static` (métodos, atributos, bloques):
 
