@@ -58,7 +58,7 @@ public class WebFormTest {
   @AfterEach
   void tearDown() {
     if (driver != null) {
-      //driver.quit(); // Cierra el navegador después de cada prueba
+      driver.quit(); // Cierra el navegador después de cada prueba
     }
     // if(driver != null) driver.quit();
   }

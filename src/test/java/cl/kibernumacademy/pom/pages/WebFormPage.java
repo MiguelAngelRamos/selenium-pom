@@ -14,6 +14,9 @@ public class WebFormPage {
   // Localizador para checkbox
   // id=my-check-1
   private By checkBox = By.id("my-check-1");
+  // Localizador para el botón de radio
+  // id=my-radio-2
+  private By radioButton = By.id("my-radio-2");
 
   /*Constructor: recibe el webdriver para interactuar con la página */
   public WebFormPage(WebDriver driver) {
@@ -49,6 +52,19 @@ public class WebFormPage {
   // Verifica si el checkbox está marcado
   public boolean isCheckBoxChecked() {
     return driver.findElement(checkBox).isSelected();
+  }
+
+  // Selecciona el radio button si no está seleccionado
+  public void selectRadioButton() {
+    WebElement radioButtonElement = driver.findElement(radioButton);
+    // if (!radioButtonElement.isSelected()) radioButtonElement.click();
+    if (!radioButtonElement.isSelected()) {
+      radioButtonElement.click();
+    } 
+  }
+  // Verifica si el radio button está seleccionado
+  public boolean isRadioButtonSelected() {
+    return driver.findElement(radioButton).isSelected();
   }
 
 
