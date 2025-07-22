@@ -11,6 +11,9 @@ public class WebFormPage {
   // Localizador para el menu desplegable
   // name=my-select
   private By selectMenu = By.name("my-select");
+  // Localizador para checkbox
+  // id=my-check-1
+  private By checkBox = By.id("my-check-1");
 
   /*Constructor: recibe el webdriver para interactuar con la página */
   public WebFormPage(WebDriver driver) {
@@ -34,7 +37,19 @@ public class WebFormPage {
     return new Select(driver.findElement(selectMenu)).getFirstSelectedOption().getText();
   }
 
+  // Marca el checkbox si no está marcado
 
+  public void checkCheckBox() {
+    WebElement checkBoxElement = driver.findElement(checkBox);
+    if (!checkBoxElement.isSelected()) {
+      checkBoxElement.click();
+    }
+  }
+
+  // Verifica si el checkbox está marcado
+  public boolean isCheckBoxChecked() {
+    return driver.findElement(checkBox).isSelected();
+  }
 
 
 
