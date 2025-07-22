@@ -21,6 +21,10 @@ public class WebFormPage {
     driver.findElement(textInput).sendKeys(text);
   }
 
+  public String getTextInput() {
+    return driver.findElement(textInput).getAttribute("value");
+  }
+
 
 
 }
