@@ -1,6 +1,7 @@
 package cl.kibernumacademy.pom.tests;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
@@ -51,6 +52,12 @@ public class WebFormTest {
   void testSelectMenu() {
    webFormPage.selectOption("Two");
    assertEquals("Two", webFormPage.getSelectedOption());
+  }
+
+  @Test
+  void testCheckBox() {
+    webFormPage.checkCheckBox(); // Marca el checkbox
+    assertTrue(webFormPage.isCheckBoxChecked());
   }
 
 }
