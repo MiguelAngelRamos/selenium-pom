@@ -1,6 +1,7 @@
 package cl.kibernumacademy.pom.pages;
 
 import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.Select;
 
 public class WebFormPage {
   private WebDriver driver;
@@ -24,6 +25,16 @@ public class WebFormPage {
   public String getTextInput() {
     return driver.findElement(textInput).getAttribute("value");
   }
+
+  public void selectOption(String value) {
+    new Select(driver.findElement(selectMenu)).selectByVisibleText(value);
+  }
+
+  public String getSelectedOption() {
+    return new Select(driver.findElement(selectMenu)).getFirstSelectedOption().getText();
+  }
+
+
 
 
 
