@@ -1,4 +1,3 @@
-
 ### 📋 Cuando una clase en Java tiene miembros `static` (métodos, atributos, bloques):
 
 ✅ Esos miembros **pertenecen a la clase**, no a los objetos.
@@ -61,11 +60,3 @@ public class Main {
 ---
 🚀 Constructor (instancia creada)
 ```
-
----
-
-### 🔷 Resumen de tu frase:
-
-✅ Sí: cuando una clase tiene métodos estáticos, la **clase se carga la primera vez que alguien la usa (o accede a un static)**.
-✅ Esa “carga” ocurre **solo una vez**.
-✅ Después puedes llamar a los métodos estáticos las veces que quieras, pero la clase ya está en memoria.
