@@ -83,4 +83,11 @@ public class WebFormTest {
     assertTrue(webFormPage.isCheckBoxChecked());
   }
 
+  @Test
+  void testRadioButton() {
+    webFormPage.selectRadioButton(); // Selecciona el botón de radio
+    // Verifica que el botón de radio esté seleccionado
+    assertTrue(webFormPage.isRadioButtonSelected());
+  }
+
 }
