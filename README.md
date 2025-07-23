@@ -1,5 +1,8 @@
 # Selenium Web Form Automation (POM)
 
+Autor: Miguel Ramos  
+Licencia: MIT
+
 Este proyecto automatiza pruebas sobre [Selenium Web Form](https://www.selenium.dev/selenium/web/web-form.html) usando Java, Selenium WebDriver, JUnit 5 y WebDriverManager, aplicando el patrón Page Object Model (POM).
 
 ## Estructura del proyecto
@@ -72,3 +75,9 @@ En POM, cada página o componente significativo de la aplicación web se represe
 Por ejemplo, en este proyecto, la clase `WebFormPage` encapsula todos los elementos y acciones del formulario web, mientras que la clase `WebFormTest` contiene los tests que validan el comportamiento del formulario. Así, si el formulario cambia, solo se modifica `WebFormPage`, manteniendo los tests limpios y robustos.
 
 El uso de POM es considerado una buena práctica en la automatización de pruebas, ya que facilita el trabajo en equipo, la colaboración y el mantenimiento a largo plazo de los proyectos de testing automatizado.
+
+---
+
+**Autor:** Miguel Ramos  
+**Licencia:** MIT
+
