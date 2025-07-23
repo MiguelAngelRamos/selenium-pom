@@ -107,4 +107,21 @@ public class WebFormTest {
     assertEquals(password, webFormPage.getPasswordInput()); 
   }
 
+  // Test: llena todos campos y envia el formulario y valida que se presente el mensaje de éxito
+  @Test
+  void testSubmitFromSuccess() {
+    webFormPage.setTextInput("Hello, Selenium!");
+    webFormPage.selectOption("Two");
+    webFormPage.checkCheckBox();
+    webFormPage.selectRadioButton();
+    webFormPage.setDateInput("2025-07-22");
+    webFormPage.setPasswordInput("mySecretPassword");
+    webFormPage.clickSubmitButton(); // Envía el formulario
+
+    // Verifica que el mensaje de éxito sea el esperado
+    // Received!
+    // assertEquals("Received!", webFormPage.getSuccessMessage());
+    assertTrue(webFormPage.getSuccessMessage().contains("Received!"), "El mensaje de éxito no es el esperado");
+  }
+
 }
