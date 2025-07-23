@@ -23,6 +23,12 @@ public class WebFormPage {
   // Localizador para el campo de contraseña
   // name=my-password
   private By passwordInput = By.name("my-password");
+  // Localizador para el botón de envío del formulario
+  // type=submit
+  private By submitButton = By.cssSelector("button[type='submit']");
+  // Localizador para el mensaje de éxito
+  // id="message"
+  private By successMessage = By.id("message");
 
   /*Constructor: recibe el webdriver para interactuar con la página */
   public WebFormPage(WebDriver driver) {
@@ -100,6 +106,16 @@ public class WebFormPage {
   // Obtiene la contraseña ingresada en el campo de contraseña
   public String getPasswordInput() {
     return driver.findElement(passwordInput).getAttribute("value"); // Devuelve el valor del campo de contraseña
+  }
+
+  // Hace clic en el botón de envío del formulario
+  public void clickSubmitButton() {
+    driver.findElement(submitButton).click(); // Localiza y hace clic en el botón de envío  
+  }
+
+  // Obtiene el mensaje de éxito después de enviar el formulario
+  public String getSuccessMessage() {
+    return driver.findElement(successMessage).getText(); // Devuelve el texto del mensaje de éxito
   }
 
 
