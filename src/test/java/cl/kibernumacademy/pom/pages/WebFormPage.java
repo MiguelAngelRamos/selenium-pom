@@ -17,6 +17,9 @@ public class WebFormPage {
   // Localizador para el botón de radio
   // id=my-radio-2
   private By radioButton = By.id("my-radio-2");
+  // Localizador para el campo de fecha
+  // name=my-date
+  private By dateInput = By.name("my-date");
 
   /*Constructor: recibe el webdriver para interactuar con la página */
   public WebFormPage(WebDriver driver) {
@@ -65,6 +68,23 @@ public class WebFormPage {
   // Verifica si el radio button está seleccionado
   public boolean isRadioButtonSelected() {
     return driver.findElement(radioButton).isSelected();
+  }
+
+  /* Escribe una fecha en el campo correspondiente
+   - Utiliza clear para borrar el valor previo
+   - Utiliza sendKeys para escribir la fecha
+  */
+  public void setDateInput(String date) {
+    WebElement dateElement = driver.findElement(dateInput); // Localiza el campo de fecha
+    dateElement.clear(); // Limpia el campo de fecha antes de escribir
+    dateElement.sendKeys(date); // Escribe la fecha en el campo
+  }
+
+  /*
+   * Obtiene la fecha ingresada en el campo de fecha
+  */
+  public String getDateInput() {
+    return driver.findElement(dateInput).getAttribute("value"); // Devuelve el valor del campo de fecha
   }
 
 
