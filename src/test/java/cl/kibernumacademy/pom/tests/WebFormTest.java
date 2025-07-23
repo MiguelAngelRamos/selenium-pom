@@ -90,4 +90,12 @@ public class WebFormTest {
     assertTrue(webFormPage.isRadioButtonSelected());
   }
 
+  // Ingresar una fecha y validar el valor ingresado
+  @Test
+  void testDateInput() {
+    webFormPage.setDateInput("2025-07-22");
+    // Verifica que la fecha ingresada sea la correcta
+    assertEquals("2025-07-22", webFormPage.getDateInput());
+  }
+
 }
