@@ -20,6 +20,9 @@ public class WebFormPage {
   // Localizador para el campo de fecha
   // name=my-date
   private By dateInput = By.name("my-date");
+  // Localizador para el campo de contraseña
+  // name=my-password
+  private By passwordInput = By.name("my-password");
 
   /*Constructor: recibe el webdriver para interactuar con la página */
   public WebFormPage(WebDriver driver) {
@@ -87,6 +90,17 @@ public class WebFormPage {
     return driver.findElement(dateInput).getAttribute("value"); // Devuelve el valor del campo de fecha
   }
 
+  // Escribe una contraseña en el campo correspondiente
+  public void setPasswordInput(String password) {
+    WebElement passwordElement = driver.findElement(passwordInput); // Localiza el campo de contraseña
+    passwordElement.clear(); // Limpia el campo de contraseña antes de escribir
+    passwordElement.sendKeys(password); // Escribe la contraseña en el campo
+  }
+
+  // Obtiene la contraseña ingresada en el campo de contraseña
+  public String getPasswordInput() {
+    return driver.findElement(passwordInput).getAttribute("value"); // Devuelve el valor del campo de contraseña
+  }
 
 
 }
