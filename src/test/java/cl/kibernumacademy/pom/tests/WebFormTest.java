@@ -98,4 +98,13 @@ public class WebFormTest {
     assertEquals("2025-07-22", webFormPage.getDateInput());
   }
 
+  // Ingresar una contraseña y validar el valor ingresado
+  @Test
+  void testPasswordInput() {
+    String password = "mySecretPassword";
+    webFormPage.setPasswordInput(password);
+    // Verifica que la contraseña ingresada sea la correcta
+    assertEquals(password, webFormPage.getPasswordInput()); 
+  }
+
 }
